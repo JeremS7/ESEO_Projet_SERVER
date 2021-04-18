@@ -18,8 +18,13 @@ public class Ville implements Serializable {
 	private String nomCommune;
 	private String codePostal;
 	private String libelle;
+	private String ligne5;
 	private String latitude;
 	private String longitude;
+	
+	public Ville() {
+		
+	}
 	
 	public Ville(String codeCommune, String nomCommune, String codePostal, String libelle, String latitude,
 			String longitude) {
@@ -28,6 +33,18 @@ public class Ville implements Serializable {
 		this.nomCommune = nomCommune;
 		this.codePostal = codePostal;
 		this.libelle = libelle;
+		this.latitude = latitude;
+		this.longitude = longitude;
+	}
+	
+	public Ville(String codeCommune, String nomCommune, String codePostal, String libelle, String ligne5, String latitude,
+			String longitude) {
+		super();
+		this.codeCommune = codeCommune;
+		this.nomCommune = nomCommune;
+		this.codePostal = codePostal;
+		this.libelle = libelle;
+		this.ligne5 = ligne5;
 		this.latitude = latitude;
 		this.longitude = longitude;
 	}
@@ -82,6 +99,14 @@ public class Ville implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public String getLigne5() {
+		return ligne5;
+	}
+
+	public void setLigne5(String ligne5) {
+		this.ligne5 = ligne5;
 	}
 
 }

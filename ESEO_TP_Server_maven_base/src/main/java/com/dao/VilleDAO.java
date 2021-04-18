@@ -9,6 +9,12 @@ public interface VilleDAO {
 	
 	public ArrayList<Ville> getAllCities();
 	
-	public ArrayList<Ville> getCityByCodePost(String codeCommune);
+	public Ville getCityByCodePost(String codeCommune);
+	
+	public void updateCity(Ville ville);
+	
+	public void addCity(Ville ville);
+	
+	public void deleteCity(String codeCommune);
 
 }
